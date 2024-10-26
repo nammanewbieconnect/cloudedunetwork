@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <!-- Font Awesome CDN for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="chatbot.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Times New Roman", Times, serif;
+            box-sizing: border-box;
+        }
+        .container {
+            padding: 10px 10%;
+            background-color: #00918a;
+        }
+        #header {
+            width: 100%;
+            height: auto;
+            background-size: cover;
+            background-position: center;
+        }
+        .top-bar {
+            background-color: #002b49;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .top-bar p {
+            margin: 0;
+            font-size: 14px;
+        }
+        .social-icons a {
+            color: white;
+            margin-left: 10px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #00d9b7; /* Hover color for icons */
+        }
+        #header {
+            width: 100%;
+            height: auto;
+            background-size: cover;
+            background-position: center;
+        }
+        .top-bar {
+            background-color: #002b49;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .top-bar p {
+            margin: 0;
+            font-size: 14px;
+        }
+        .social-icons a {
+            color: white;
+            margin-left: 10px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #00d9b7; /* Hover color for icons */
+        }
+        .navbar {
+            background-color: #00918a;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo img {
+            height: 50px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 30px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #29b6f6; /* Hover color for navigation links */
+        }
+        .body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .start{
+            text-align: center;
+            margin-bottom: 20px;
+            margin-top: 10px;
+        }
+        .start h1 {
+            font-size: 2.5em;
+            color: black;
+        }
+        .start h2 {
+            font-size: 2em;
+            color: black;
+            margin-top: 30px;
+        }
+        .services-section {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            padding: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .service {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        .service:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        /* Image styling */
+        .service-image img {
+            max-width: 350px;
+            border-radius: 8px;
+        }
+        /* Text styling */
+        .service-text {
+            max-width: 600px;
+        }
+        /* Animations */
+        .service-image, .service-text {
+            opacity: 0;
+            transform: translateX(100px);
+            animation: slide-in-left 1s ease-out forwards;
+        }
+        .service:nth-child(even) .service-image,
+        .service:nth-child(odd) .service-text {
+            transform: translateX(-100px);
+            animation: slide-in-right 1s ease-out forwards;
+        }
+        /* Apply delays for staggered animation */
+        .service:nth-child(1) .service-image,
+        .service:nth-child(1) .service-text {
+            animation-delay: 0.3s;
+        }
+        .service:nth-child(2) .service-image,
+        .service:nth-child(2) .service-text {
+            animation-delay: 0.6s;
+        }
+        .service:nth-child(3) .service-image,
+        .service:nth-child(3) .service-text {
+            animation-delay: 0.9s;
+        }
+        /* Keyframes */
+        @keyframes slide-in-left {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        @keyframes slide-in-right {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+    </style>
+    <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <p>📞 +91 8867045172 | 📧 support@cloudedunetwork.com</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="navbar">
+            <div class="logo">
+                <img src="1.png" alt="CloudeduNetwork logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="Services.html">Services</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                    <li><a href="becomeinstruct.html">Become an instructor</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="start">
+        <h1>Our Services</h1>
+        <p>Explore our comprehensive range of IT services designed to empower your business.</p>
+    </div>    
+    <main>
+        <div class="services-section">
+            <div class="service">
+                <div class="service-image">
+                    <video width="320" height="240" controls autoplay muted>
+                        <source src="IT infra.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="service-text">
+                    <h2>IT Infrastructure</h2>
+                    <p>
+                        <ul>
+                            <li>Assessing business needs: Understand what your business needs and how your IT infrastructure
+                                can support them</li>
+                            <li>
+                                Planning: Plan the architecture of your IT infrastructure
+                            </li>
+                            <li>
+                                Choosing a partner: Select a partner with experience in managing IT platforms of various sizes
+                            </li>
+                            <li>
+                                Prioritizing security: Make security a top priority
+                            </li>
+                            <li>
+                                Creating a disaster recovery plan: Develop a plan to recover from data loss or corruption
+                            </li>
+                            <li>
+                                Using cloud services: Cloud computing can be a scalable and affordable way to store data,
+                                launch apps, and access computing resources
+                            </li>
+                            <li>
+                                Conducting a risk assessment: Identify threats and vulnerabilities to your IT infrastructure and
+                                keep your assessment up to date
+                            </li>
+                            <li>
+                                Documenting everything: Document your infrastructure management strategy and individual
+                                assets
+                            </li>
+                            <li>
+                                Using network monitoring software: Use software to monitor your network and servers for
+                                malfunctions and incidents
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        
+            <div class="service">
+                <div class="service-text">
+                    <h2>Cloud & Hybrid Cloud</h2>
+                    <p>
+                        <ul>
+                            <li>Public Cloud: Offers online accessibility, scalability, and cost-efficiency. You pay for resources
+                                you use, which can improve efficiency.</li>
+                            <li>
+                                Private cloud: Provides security and control for organizations that need to comply with
+                                regulations. You can store, maintain, and access data completely.
+                            </li>
+                            <li>
+                                Hybrid cloud: Combines the flexibility and scalability of public cloud services with the security
+                                and control of private cloud environments. You can run some workloads in the cloud while
+                                keeping sensitive data in your own datacenter.
+                            </li>
+                            <li>
+                                Disaster recovery: Helps ensure business continuity and minimize the impact of a disaster on
+                                your operations, customers, and reputation.
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="service-image">
+                    <img src="clound+infra.jpeg"Cloud Security Solutions">
+                </div>
+            </div>
+        
+            <div class="service">
+                <div class="service-image">
+                    <img src="EUC.jpeg" alt="Cloud Security Tools Implementation">
+                </div>
+                <div class="service-text">
+                    <h2>EUC</h2>
+                    <p>
+                        <ul>
+                            <li>Centralized management: Manage all desktops and applications in one place</li>
+                            <li>
+                                Secure work environment: Use advanced authentication technologies to control user access to data
+                            </li>
+                            <li>
+                                Virtual desktop infrastructure (VDI): Improve security, flexibility, and management of desktop environments
+                            </li>
+                            <li>
+                                Identity and access management (IAM): Balance security and user convenience
+                            </li>
+                        </ul>
+                        
+                    </p>
+                </div>
+            </div>
+            <div class="service">
+                <div class="service-image">
+                    <img src="service1.png" alt="Cloud Security Tools Implementation">
+                </div>
+                <div class="service-text">
+                    <h2>Service Integration (Tools)</h2>
+                    <p>
+                        <ul>
+                            <li>Automating workflows: Reducing manual intervention and speeding up processes</li>
+                            <li>
+                                Improving customer experience: Ensuring a seamless flow of data between customer-facing and internal sytems
+                            </li>
+                            <li>
+                                Reducing costs: Lowering IT maintenance costs by using standardized integration solutions
+                            </li>
+                            <li>
+                                Supporting scalability: Making it easy to add or modify integrations as a business grows
+                            </li>
+                        </ul>
+                        
+                    </p>
+                </div>
+            </div>
+            <div class="service">
+                <div class="service-image">
+                    <img src="cyber.jpeg" alt="Cloud Security Tools Implementation">
+                </div>
+                <div class="service-text">
+                    <h2>Network & Cyber Security</h2>
+                    <p>
+                        <ul>
+                            <li>Access management</li>
+                            <li>Firewalls</li>
+                            <li>Intrusion Prevention Systems</li>
+                            <li>DLP Software</li>
+                            <li>Secure Remote Access</li>
+                        </ul>  
+                    </p>
+                </div>
+            </div>
+            <div class="service">
+                <div class="service-image">
+                    <img src="service Integration.png" alt="Cloud Security Tools Implementation">
+                </div>
+                <div class="service-text">
+                    <h2>Software & Testing</h2>
+                    <p>
+                        <ul>
+                            <li>Performance testing</li>
+                            <li>Web and mobile application testing</li>
+                            <li>Functional and performance testing</li>
+                            <li>Migration testing</li>
+                            <li>Security testing</li>
+                            <li>Quality assurance</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+            <div class="service">
+                <div class="service-image">
+                    <img src="services.jpeg" alt="Cloud Security Tools Implementation">
+                </div>
+                <div class="service-text">
+                    <h2>IT Consulting</h2>
+                    <p>
+                        <ul>
+                            <li>IT strategy and planning
+                            <li>IT infrastructure and architecture</li> 
+                            <li>IT security and risk management</li>
+                            <li>IT project management</li>
+                            <li>IT vendor management</li>
+                            <li>IT process optimization</li>
+                            <li>Training programs</li>
+                            <li>Ongoing IT support</li>
+                            <li>On-Site Consultation: For companies looking to involve a professional visiting your location to
+                                assess and provide expert advice tailored to your specific needs. This service is crucial for
+                                accurately understanding the environment, identifying issues, and implementing solutions
+                                directly where they&#39;re needed. It’s particularly beneficial for projects requiring detailed
+                                inspections, personalized recommendations, and hands-on support.</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>        
+    </main>
+    <footer>
+        <p>Contact us for more information about our services.</p>
+    </footer>
+    <div id="chatbot">
+        <div id="chatbot-header">
+            <span>Chat with us!</span>
+            <button id="close-chat">×</button>
+        </div>
+        <div id="chatbot-body">
+            <div id="messages"></div>
+            <input type="text" id="user-input" placeholder="Type your question..." />
+            <button id="send-btn">Send</button>
+        </div>
+    </div>
+    
+    <button id="open-chat" style="display: none;">Chat</button>
+    <div id="chatbot-logo" onclick="toggleChat()">
+        <img src="alisa.png" alt="Chatbot Logo" />
+    </div>
+    <script src="script.js"></script>   
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <img src="1.png" alt="Company Logo" class="footer-logo">
+                <p>Cloudedu Network offers training courses and modern IT Infrastructure, Cloud and security solutions. We protect data integrity, optimize cloud infrastructure, and assist with compliance and migration & focused on accelerating business transformation and delivering human-centric digital experiences</p>
+                <div class="footer-social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/cloudedunetwork/"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="Services.html">Services</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                    <li><a href="becomeinstruct.html">Become an Instructor</a></li>
+                </ul>
+            </div>
+            <div class="footer-section1">
+                <h4>Have a Question?</h4>
+                <p>Phone: +91 8867045172</p>
+                <p>Email: support@cloudedunetwork.com</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024, All rights reserved By cloudeduNetwork.com Pvt. LTd.</p>
+        </div>
+    </footer>
+    <div id="chatbot-logo" onclick="toggleChat()">
+        <script defer src="https://app.fastbots.ai/embed.js" data-bot-id="cm2oxntlt04mvsvbpbq0k1xdb"></script>
+    </div>
+</body>
+</html>
