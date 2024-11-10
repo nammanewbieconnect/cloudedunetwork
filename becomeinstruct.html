@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Become an instructor</title>
+    <link rel="stylesheet" href="chatbot.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Times New Roman", Times, serif;
+            box-sizing: border-box;
+        }
+        .container {
+            padding: 10px 10%;
+            background-color: #00918a;
+        }
+        #header {
+            width: 100%;
+            height: auto;
+            background-size: cover;
+            background-position: center;
+        }
+        .top-bar {
+            background-color: #002b49;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .top-bar p {
+            margin: 0;
+            font-size: 14px;
+        }
+        .social-icons a {
+            color: white;
+            margin-left: 10px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #00d9b7; /* Hover color for icons */
+        }
+        .navbar {
+            background-color: #00918a;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo img {
+            height: 50px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 30px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #29b6f6; /* Hover color for navigation links */
+        }
+        body{
+            background-image: url(background.png);
+        }
+        .contact-container{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .contact-left{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 20px;
+        }
+        .contact-left-title h2{
+            font-weight: 600;
+            color: white;
+            font-size: 40px;
+            margin-bottom: 5px;
+        }
+        .contact-left-title hr{
+            border: none;
+            width: 120px;
+            height: 5px;
+            background-color: white;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .contact-inputs{
+            width: 400px;
+            height: 50px;
+            border: none;
+            outline: none;
+            padding-left: 25px;
+            font-weight: 500px;
+            color: black;
+            border-radius: 50px;
+        }
+        .contact-left textarea{
+            height: 140px;
+            padding-top: 15px;
+            border-radius: 20px;
+        }
+        .contact-inputs:focus{
+            border: 2px solid black;
+        }
+        .contact-inputs::placeholder{
+            color: gray;
+        }
+        .contact-left button{
+            display: flex;
+            align-items: center;
+            padding: 15px 30px;
+            font-size: 16px;
+            color: white;
+            gap: 10px;
+            border: none;
+            border-radius: 50px;
+            background-color: #00918a;
+            cursor: pointer;
+        }
+        .contact-left button img{
+            height: 15px;
+        }
+        .contact-right img{
+            width: 500px;
+        }
+        .form-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .button {
+            display: block; /* Allows buttons to be placed in line */
+            margin-top: 0px; /* Adds space between buttons */
+            padding: 10px 10px; /* Adjust button size */
+            background-color: #f49026; /* Green background */
+            color: white; /* White text */
+            text-align: center; /* Centers the text within the button */
+            text-decoration: none; /* Removes underline */
+            border-radius: 5px; /* Rounds the corners */
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #45a049; 
+        }
+        @media (max-width: 800px) {
+            .contact-inputs{
+                width: 80vw;
+            }
+            .contact-right{
+                display: none;
+            }
+            .navbar {
+                background-color: #00918a;
+                padding: 20px 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .logo img {
+                height: 50px;
+            }
+            nav ul {
+                list-style: none;
+                display: flex;
+            }
+            nav ul li {
+                margin-left: 10px;
+                justify-content: space-evenly;
+            }
+            nav ul li a {
+                color: white;
+                text-decoration: none;
+                font-size: 12px;
+                transition: color 0.3s ease;
+            }
+            nav ul li a:hover {
+                color: #29b6f6; /* Hover color for navigation links */
+            }
+            .form-container {
+                max-width: 700px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <p>📞 +91 8867045172 | 📧 support@cloudedunetwork.com</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="navbar">
+            <div class="logo">
+                <img src="1.png" alt="CloudeduNetwork logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="Services.html">Services</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                    <li><a href="becomeinstruct.html">Become an instructor</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe0F5WgjtMyXXQ_M19Ozq_lSyD_C0aUF2L2cID_BrphypUTyA/viewform?usp=sf_link" class="button">Here is the form</a>
+    <script src="script.js"></script> 
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <img src="1.png" alt="Company Logo" class="footer-logo">
+                <p>Cloudedu Network offers training courses and modern IT Infrastructure, Cloud and security solutions. We protect data integrity, optimize cloud infrastructure, and assist with compliance and migration & focused on accelerating business transformation and delivering human-centric digital experiences</p>
+                <div class="footer-social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="Services.html">Services</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                    <li><a href="becomeinstruct.html">Become an Instructor</a></li>
+                </ul>
+            </div>
+            <div class="footer-section1">
+                <h4>Have a Question?</h4>
+                <p>Phone: +91 8867045172</p>
+                <p>Email: support@cloudedunetwork.com</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024, All rights reserved By cloudeduNetwork.com Pvt. LTd.</p>
+        </div>
+    </footer>
+    <div id="chatbot-logo" onclick="toggleChat()">
+        <script defer src="https://app.fastbots.ai/embed.js" data-bot-id="cm2oxntlt04mvsvbpbq0k1xdb"></script>
+    </div>
+</body>
+</html>
